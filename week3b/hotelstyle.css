@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 *{
     box-sizing: border-box;
-
-=======
-#{
-    box-sizing: border-box;
-
->>>>>>> origin/master
 }
 
 .content {
@@ -18,18 +11,12 @@
 th {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
-<<<<<<< HEAD
     font-size: 75%;
-=======
->>>>>>> origin/master
 }
 
 td{
     font-family: 'Open Sans', sans-serif;
-<<<<<<< HEAD
     font-size: 75%;
-=======
->>>>>>> origin/master
 }
 
 table {
@@ -44,26 +31,20 @@ tr>td{
 
 tr>th{
     padding-bottom: 10px;
-<<<<<<< HEAD
     padding-right: 20px;
 }
 
 li{
     font-family: 'Open Sans', sans-serif;
     font-size:75%;
-=======
     padding-right: 10px;
->>>>>>> origin/master
 }
 
 .tableclass {
     float: right;
     width: 300px;
     margin-left: 30px;
-<<<<<<< HEAD
     background-color: #eeeeee;
-=======
->>>>>>> origin/master
 }
 
 img{
