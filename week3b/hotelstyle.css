@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+
+}
+
 .content {
     max-width: 1000px;
     margin: auto;
@@ -7,10 +12,12 @@
 th {
     text-align: left;
     font-family: 'Open Sans', sans-serif;
+    font-size: 75%;
 }
 
 td{
     font-family: 'Open Sans', sans-serif;
+    font-size: 75%;
 }
 
 table {
@@ -25,13 +32,19 @@ tr>td{
 
 tr>th{
     padding-bottom: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
+}
+
+li{
+    font-family: 'Open Sans', sans-serif;
+    font-size:75%;
 }
 
 .tableclass {
     float: right;
     width: 300px;
     margin-left: 30px;
+    background-color: #eeeeee;
 }
 
 img{
