@@ -1,0 +1,80 @@
+#{
+    box-sizing: border-box;
+    
+}
+
+.content {
+    max-width: 1000px;
+    margin: auto;
+    overflow: auto;
+}
+
+th {
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+td{
+    font-family: 'Open Sans', sans-serif;
+}
+
+table {
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+}
+
+tr>td{
+    padding-bottom: 10px;
+}
+
+tr>th{
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.tableclass {
+    float: right;
+    width: 300px;
+    margin-left: 30px;
+}
+
+img{
+    width: 100%;
+}
+
+.line{
+    padding-top: 1px;
+    width:100%;
+    background-color:black;
+}
+
+.line2{
+    padding-top: 1px;
+    max-width:650px;
+    background-color:black;
+}
+
+h1{
+    line-height: 10px;
+    padding-top: 20px;
+    font-family: 'Noto Serif JP', sans-serif;
+
+}
+
+.small{
+    font-size: .8em;
+    line-height: 0;
+    padding-bottom:10px;
+}
+
+h4{
+    line-height: 0;
+    padding-top: 30px;
+    font-family: 'Noto Serif JP', sans-serif;
+
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+}
