@@ -218,6 +218,7 @@ p {
     grid-row: 1/span 11;
     margin-top: 2vw;
     margin-right: 2vw;
+    transition: .2s ease;
 }
 
 .topnav a {
@@ -259,6 +260,7 @@ p {
 .topnav.responsive {
     position: relative;
     background-color: #ffffff;
+    transition: .2s ease;
 }
 
 .topnav.responsive .icon {
