@@ -1,21 +1,21 @@
-body {
+body { /* This will set the base margin to 0 and prevent scrolling */
     padding: 0;
     margin: 0;
     height: 100vh;
 }
 
-.mainstuff {
+.mainstuff { /* This sets up the grid for all its children, also divides grid into 9 equal segments with no gutters */
     margin: auto;
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(9, 1fr);
 }
 
-img {
+img { /* This just ensures the photos will stay fit within their containers */
     width: 100%;
 }
 
-.logo {
+.logo { /* Sets the placement of the div in the grid system */
     grid-column: 1/span 2;
     grid-row: 1/span 1;
     padding-left: 4vw;
@@ -24,7 +24,7 @@ img {
     padding-bottom: 0px;
 }
 
-.hamburger {
+.hamburger { /* Technically don't need this anymore after updating the hamburger, but leaving it here just in case */
     grid-column: 4/span 1;
     grid-row: 1/span 1;
     padding-left: 4vw;
@@ -33,7 +33,7 @@ img {
     padding-bottom: 0px;
 }
 
-.tallpic {
+.tallpic { /* Sets the placement of the div in the grid system and sets the image to cover and center so it will scale neatly */
     grid-column: 5/span 3;
     grid-row: 1/span 9;
     background-image: url(reach.jpg);
@@ -42,20 +42,20 @@ img {
     background-size: cover;
 }
 
-.sidetext {
+.sidetext { /* Sets the placement of the div in the grid system */
     padding-top: 4vh;
     grid-column: 8/span 2;
     grid-row: 1/span 2;
     padding-left: 2vw;
 }
 
-.heading {
+.heading { /* Sets the placement of the div in the grid system */
     grid-column: 1/span 4;
     grid-row: 6/span 3;
     padding-left: 4vw;
 }
 
-.sidepic {
+.sidepic { /* Sets the placement of the div in the grid system and sets the image to cover and center so it will scale neatly */
     grid-column: 8/span 2;
     grid-row: 5/span 6;
     background-image: url(bend.jpg);
@@ -64,7 +64,7 @@ img {
     background-size: cover;
 }
 
-.categories {
+.categories { /* Sets the placement of the div in the grid system and sets it as a flex parent so that the three blurbs will be spaced evenly */
     padding-left: 4vw;
     padding-right: 3vw;
     grid-column: 1/span 4;
@@ -74,11 +74,11 @@ img {
     justify-content: space-between;
 }
 
-.blurb {
+.blurb { /* Sets the width of the blurbs to 30% */
     width: 30%;
 }
 
-.buttons {
+.buttons { /* Sets the placement of the div in the grid system and sets it as a flex parent so the buttons will fill in evenly */
     grid-column: 5/span 3;
     grid-row: 10/span 1;
     display: flex;
@@ -88,19 +88,19 @@ img {
     vertical-align: middle;
 }
 
-.left {
+.left { /* sets the left button to take up twice the extra space as the right and sets the bg color */
     background-color: #444444;
     flex-grow: 2;
     transition: .2s ease;
 }
 
-.right {
+.right { /* sets the bg color, fill space, etc. */
     background-color: #c9dcee;
     flex-grow: 1;
     transition: .2s ease;
 }
 
-h1 {
+h1 { /* I wanted text to scale with page resizing- I haven't added media queries yet but I intend to come back and do it later in the semester so it doesn't become unreadably small after resizing */
     font-family: 'Assistant', sans-serif;
     font-weight: 800;
     color: #444444;
@@ -140,7 +140,7 @@ p {
     font-size: 1.3vw;
 }
 
-.leftbut {
+.leftbut { /* sets the color of the text in the left button (underneath tallpic) */
     color: #ffffff;
 }
 
@@ -149,7 +149,7 @@ p {
     vertical-align: middle;
 }
 
-.left:hover {
+.left:hover { /* changes color and eases transition when hovering over button */
     background-color: #e2888f;
     transition: .2s ease;
 }
@@ -159,7 +159,7 @@ p {
     transition: .2s ease;
 }
 
-.time {
+.time { /* sets placement in tallpic div for "fall 2018" div */
     padding-top: 2vw;
     padding-left: 3vw;
     width: 18%;
@@ -174,7 +174,7 @@ p {
     line-height: 0;
 }
 
-.testside {
+.testside { /* named because it was initially a test, but liked how it ended up- turns text sideways and fills in a space in the grid */
     padding-top: 1vh;
     padding-right: 2vw;
     grid-column: 8/span 1;
@@ -182,14 +182,14 @@ p {
     writing-mode: vertical-rl;
 }
 
-.spaceline {
+.spaceline { /* makes a solid line */
     width: 80%;
     text-align: center;
     height: 0.2vw;
     background-color: #999999;
 }
 
-.smalline {
+.smalline { /* makes a solid line but vertical */
     width: 0.2vw;
     height: 4vh;
     background-color: #999999;
@@ -202,7 +202,7 @@ p {
 
 /*hamburger stuff*/
 
-.menu {
+.menu { /* overlays the left half of the screen with a separate grid with the hamburger menu in it so it will cleanly cover the content and fill the space - i wanted to do this neater, but this was the best way I could come up with */
     display: grid;
     height: 100vh;
     width: 44%;
@@ -211,7 +211,7 @@ p {
     top: -100vh;
 }
 
-.topnav {
+.topnav { /* positions the hamburger menu content */
     overflow: hidden;
     grid-column: 1/span 4;
     grid-row: 1/span 11;
@@ -220,7 +220,7 @@ p {
     transition: .2s ease;
 }
 
-.topnav a {
+.topnav a { /* positions the hamburger icon and text links */
     float: left;
     display: block;
     color: #444444;
@@ -233,42 +233,33 @@ p {
     transition: .2s ease;
 }
 
-.topnav a:hover {
+.topnav a:hover { /* sets hover values for hamburger icon and text links */
     color: #e2888f;
     transition: .2s ease;
 }
 
-.active {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.topnav .icon {
+.topnav a { /* makes it so the links (hamburger included at this point) won't show up unless activated */
     display: none;
 }
 
-.topnav a {
-    display: none;
-}
-
-.topnav a.icon {
+.topnav a.icon { /* keeps the hamburger icon floated right and displayed */
     float: right;
     display: block;
 }
 
-.topnav.responsive {
+.topnav.responsive { /* sets the background object (white background) that shows up when hamburger menu is activated behind the text links */
     position: relative;
     background-color: #ffffff;
     transition: .2s ease;
 }
 
-.topnav.responsive .icon {
+.topnav.responsive .icon { /* positions the hamburger icon once the menu is activated */
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.topnav.responsive a {
+.topnav.responsive a { /* positions the list links once the menu is activated */
     float: none;
     display: block;
     text-align: center;
