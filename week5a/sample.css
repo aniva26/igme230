@@ -1,0 +1,55 @@
+h1 {
+    background-color: lightgray;
+    text-align: center;
+    margin: 5px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.link {
+    background-color: lightgray;
+    text-align: center;
+    margin: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+a {
+    color: black;
+}
+
+h3 {
+    display: none;
+}
+
+img {
+    width: 100%;
+    margin: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+aside {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 5px;
+}
+
+@media (min-width: 620px) {
+    aside{
+        float: right;
+        width: 18%;
+    }
+    nav{
+        float: left;
+        width: 18%;
+    }
+    article{
+        float: left;
+        width: 52%;
+        padding: 0 20px
+    }
+
+}
