@@ -9,6 +9,7 @@ body { /* This will set the base margin to 0 and prevent scrolling */
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(9, 1fr);
+
 }
 
 img { /* This just ensures the photos will stay fit within their containers */
