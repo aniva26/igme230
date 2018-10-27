@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Week 9 Homework</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+        html {
+            font-family: Lato;
+            font-size: 16px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px dotted black;
+            padding: 0 10px;
+        }
+
+        h1 {
+            font-weight: 900;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <h1>My Favorites</h1>
+        <h2>My Favorite Colors</h2>
+
+        <ol id="colorsList">
+
+
+        </ol>
+
+        <h2>My Favorite Foods</h2>
+
+        <ol id="foodsList">
+
+        </ol>
+
+    </main>
+
+    <script>
+        "use strict";
+        let colors = ["black", "white", "pink", "blue"]; // add some colors
+        let foods = ["bread", "cheese", "cookies", "pizza"]; // add some foods
+
+        createList(colorsList, colors);
+        createList(foodsList, foods);
+
+
+        function createList(listElement, array) {
+            for (let i = 0; i < array.length; i++) {
+
+                var node = document.createElement("li");
+                //makes a variable that creates an li element
+
+                var listText = document.createTextNode(array[i]);
+                //makes a variable that creates a textnode that is filled with color array
+
+                node.appendChild(listText);
+                //sets a as the child of the li element
+
+                listElement.appendChild(node);
+                //inserts the li elements consecutively in the colorslist ol
+            }
+        }
+    </script>
+
+</body>
+
+</html>
