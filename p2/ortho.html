@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UI and UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portcontent">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AnikaNiva</h1>
+            </a>
+        </div>
+
+        <div class="topbar">
+
+        </div>
+
+        <div class="nav" id="myNav">
+            <!--            <a href="javascript:void(0);" class="icon" onclick="openHam()">-->
+            <h3 class="icon" onclick="openHam()">menu</h3>
+            <div class="nav1 navhov">
+                <h3><a href="#">Portfolio</a></h3>
+            </div>
+            <div class="nav2box">
+                <div class="nav2">
+                    <h4><a href="uiux.html">UI/UX</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="anim.html">Animation</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="coding.html">Coding</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="graphic.html">Graphics</a></h4>
+                </div>
+            </div>
+            <div class="nav1">
+                <h3><a href="resume.html">Resume</a></h3>
+            </div>
+            <div class="nav1">
+                <h3><a href="contact.html">Contact</a></h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="contents">
+            <div class="hero">
+                <div class="heropic">
+                    <img src="media/orthodash.png" alt="portfolio">
+                </div>
+            </div>
+
+            <div class="title">
+                    <h2>Ortho Dash</h2>
+                <h4>Ortho Clinical Diagnostics</h4>
+            </div>
+
+            <div class="description">
+                <p>The Ortho Dash is a project I've been working on as a part-time employee at Ortho Clinical Diagnosics since February. Ortho Clinical Diagnostics is a company that makes medical analyzers, large machines that go in medical labs that are used to process and test blood and other fluids. We are developing this dashboard to allow lab technicians to monitor the statuses of their analyzers from afar without needing to constantly walk around to see if there's a problem that needs to be resolved. We are also trying to use the dashboard as a way to consolidate the flow of information that's coming and simplify it for the user.</p>
+            </div>
+
+            <div class="slideshow">
+                <div class="slide">
+                    <div class="slidepage" onclick="next()">
+                        <h5>Slide 01 / 03</h5>
+                        <h4>Next</h4>
+                    </div>
+                    <div class="slidepic">
+                        <img src="media/ortho1.png" alt="portfolio">
+                    </div>
+                    <div class="slidetext">
+                        <p>This was my first stab at the dashboard, and was designed before I fully understood the analyzers and the needs of our users. This prototype, which I brought to life in <i>InVision</i> was initially just a wireframe but some colors were added to flesh out the concept to potential developers </p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slidepage" onclick="next()">
+                        <h5>Slide 02 / 03</h5>
+                        <h4>Next</h4>
+                    </div>
+                    <div class="slidepic">
+                        <img src="media/ortho2.jpg" alt="portfolio">
+                    </div>
+                    <div class="slidetext">
+                        <p>This was the second iteration of the dashboard. We finessed the styling quite a bit and performed some formative testing with this, but overall determined that this dashboard was far too busy and filled with information that was extraneous to the typicaly user</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slidepage" onclick="next()">
+                        <h5>Slide 03 / 03</h5>
+                        <h4>Next</h4>
+                    </div>
+                    <div class="slidepic">
+                        <img src="media/ortho3.png" alt="portfolio">
+                    </div>
+                    <div class="slidetext">
+                        <p>We recently got back to work on this iteration of the dashboard. We are simplifying the content a lot and listing the requirements for this initial simplified release before proceeding. We are trying to make everything in this iteration clean and easy to navigate and find information. We are using <i>Figma</i> to develop and prototype these.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function openHam() {
+            var x = document.getElementById("myNav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+                document.getElementsByClassName("logo")[0].style.display = "none";
+            } else {
+                x.className = "nav";
+                document.getElementsByClassName("logo")[0].style.display = "block";
+            }
+        }
+
+
+
+        var slide = 1;
+        showSlide(slide);
+
+        function next() {
+            showSlide(slide += 1);
+        }
+
+        function showSlide(x) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (x > slides.length) {
+                slide = 1;
+            }
+            if (x < 1) {
+                slide = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide - 1].style.display = "block";
+            text[slide - 1].style.display = "block";
+        }
+
+    </script>
+</body>

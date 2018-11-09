@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UI and UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portcontent">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AnikaNiva</h1>
+            </a>
+        </div>
+
+        <div class="topbar">
+
+        </div>
+
+        <div class="nav" id="myNav">
+            <!--            <a href="javascript:void(0);" class="icon" onclick="openHam()">-->
+            <h3 class="icon" onclick="openHam()">menu</h3>
+            <div class="nav1 navhov">
+                <h3><a href="#">Portfolio</a></h3>
+            </div>
+            <div class="nav2box">
+                <div class="nav2">
+                    <h4><a href="uiux.html">UI/UX</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="anim.html">Animation</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="coding.html">Coding</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="graphic.html">Graphics</a></h4>
+                </div>
+            </div>
+            <div class="nav1">
+                <h3><a href="resume.html">Resume</a></h3>
+            </div>
+            <div class="nav1">
+                <h3><a href="contact.html">Contact</a></h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="contents">
+            <div class="hero">
+                <div class="heropic">
+                    <img src="media/catch22.jpg" alt="portfolio">
+                </div>
+            </div>
+
+            <div class="title">
+                    <h2>Book Cover</h2>
+                <h4>RIT - New Media Survey I</h4>
+            </div>
+
+            <div class="description">
+                <p>This project was from my first semester at RIT, but I was still really happy with the concept and the way that it turned out (not to mention the book I designed the cover for, <i>Catch 22</i>, is one of my favorite books. Because the book deals with the ridiculousness of war and the entire title of the book revolves around the concept that you'd have to be insane to fly into the certain death of their missions, and an insane person can't fly, but only a sane person would refuse to fly them- thus, no matter what, you need to fly these dangerous missions. There is a very dark humor about the book overall in addition to the childlike ridiculousness and I loved the concept of illustrating that with a child's drawing of an pilot smiling happily in his plane as a missile is seconds away from killing him.</p>
+            </div>
+
+            <div class="slideshow">
+                <div class="slide">
+                    <div class="slidepage" onclick="next()">
+                        <h5>Slide 01 / 03</h5>
+                        <h4>Next</h4>
+                    </div>
+                    <div class="slidepic">
+                        <img src="media/book1.jpg" alt="portfolio">
+                    </div>
+                    <div class="slidetext">
+                        <p>This was an early draft of the cover- I had drawn the airplane image and text myself (using my left hand) but I decided I wanted to go for something a bit more authentic</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slidepage" onclick="next()">
+                        <h5>Slide 02 / 03</h5>
+                        <h4>Next</h4>
+                    </div>
+                    <div class="slidepic">
+                        <img src="media/book2.jpg" alt="portfolio">
+                    </div>
+                    <div class="slidetext">
+                        <p>This was an early version I put together after I commissioned my little brothers to draw me the scene- they all love drawing war and battle scenes and were an awesome resource for creating this authentic juvenile feeling</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slidepage" onclick="next()">
+                        <h5>Slide 03 / 03</h5>
+                        <h4>Next</h4>
+                    </div>
+                    <div class="slidepic">
+                        <img src="media/book3.jpg" alt="portfolio">
+                    </div>
+                    <div class="slidetext">
+                        <p>For the final cover, I opted for cleaner title text and brought that pop of red back in from the earlier draft to represent the death or war and give a stronger juxtaposition with the artwork</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function openHam() {
+            var x = document.getElementById("myNav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+                document.getElementsByClassName("logo")[0].style.display = "none";
+            } else {
+                x.className = "nav";
+                document.getElementsByClassName("logo")[0].style.display = "block";
+            }
+        }
+
+
+
+        var slide = 1;
+        showSlide(slide);
+
+        function next() {
+            showSlide(slide += 1);
+        }
+
+        function showSlide(x) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (x > slides.length) {
+                slide = 1;
+            }
+            if (x < 1) {
+                slide = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide - 1].style.display = "block";
+            text[slide - 1].style.display = "block";
+        }
+
+    </script>
+</body>

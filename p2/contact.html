@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UI and UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portcontent">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AnikaNiva</h1>
+            </a>
+        </div>
+
+        <div class="topbar">
+
+        </div>
+
+        <div class="nav" id="myNav">
+            <!--            <a href="javascript:void(0);" class="icon" onclick="openHam()">-->
+            <h3 class="icon" onclick="openHam()">menu</h3>
+            <div class="nav1 navhov">
+                <h3><a href="#">Portfolio</a></h3>
+            </div>
+            <div class="nav2box">
+                <div class="nav2">
+                    <h4><a href="uiux.html">UI/UX</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="anim.html">Animation</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="coding.html">Coding</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="graphic.html">Graphics</a></h4>
+                </div>
+            </div>
+            <div class="nav1">
+                <h3><a href="resume.html">Resume</a></h3>
+            </div>
+            <div class="nav1">
+                <h3><a href="contact.html">Contact</a></h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="contacts">
+            <div class="contitle">
+                <h3>Fill out your information here and I'll get back to you!</h3>
+            </div>
+            <div class="form">
+                <form action="process.php" method="GET" class="fill">
+
+                    <div class="q1">
+                        <p class="header">What's your name?</p>
+                        <input type="text" name="name" id="name" placeholder="Name" required>
+                    </div>
+
+                    <div class="q2">
+                        <p class="header">What's your email address?</p>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="q3">
+                        <p class="header">What's your message?</p>
+
+                        <textarea name="message" id="message">Message
+                    </textarea>
+                    </div>
+
+                    <div class="sub">
+                        <input type="submit" class="button" value="Send">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <script>
+            function openHam() {
+                var x = document.getElementById("myNav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                    document.getElementsByClassName("logo")[0].style.display = "none";
+                } else {
+                    x.className = "nav";
+                    document.getElementsByClassName("logo")[0].style.display = "block";
+                }
+            }
+
+        </script>
+</body>

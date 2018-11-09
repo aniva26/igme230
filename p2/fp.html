@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UI and UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portcontent">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AnikaNiva</h1>
+            </a>
+        </div>
+
+        <div class="topbar">
+
+        </div>
+
+        <div class="nav" id="myNav">
+            <!--            <a href="javascript:void(0);" class="icon" onclick="openHam()">-->
+            <h3 class="icon" onclick="openHam()">menu</h3>
+            <div class="nav1 navhov">
+                <h3><a href="#">Portfolio</a></h3>
+            </div>
+            <div class="nav2box">
+                <div class="nav2">
+                    <h4><a href="uiux.html">UI/UX</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="anim.html">Animation</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="coding.html">Coding</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="graphic.html">Graphics</a></h4>
+                </div>
+            </div>
+            <div class="nav1">
+                <h3><a href="resume.html">Resume</a></h3>
+            </div>
+            <div class="nav1">
+                <h3><a href="contact.html">Contact</a></h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="contents">
+            <div class="hero">
+                <div class="heropic">
+                    <img src="media/fp.jpg" alt="portfolio">
+                </div>
+            </div>
+
+            <div class="title">
+                    <h2>Beauty and Wellness</h2>
+                <h4>Free People</h4>
+            </div>
+
+            <div class="description">
+                <p>When I was a summer intern at Free People, I worked mostly with their graphic design department but was working on my final intern project throughout the summer, which was designing and then developing an updated landing page for Beauty and Wellness, one of their top product categories. I really wanted to make it fun and beautiful and interactive and coded this after taking just one semester of HTML and CSS</p>
+            </div>
+
+            <div class="slideshow">
+            <iframe src="http://aln3339.cias.rit.edu/freepeople/">
+
+            </iframe>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function openHam() {
+            var x = document.getElementById("myNav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+                document.getElementsByClassName("logo")[0].style.display = "none";
+            } else {
+                x.className = "nav";
+                document.getElementsByClassName("logo")[0].style.display = "block";
+            }
+        }
+
+
+
+        var slide = 1;
+        showSlide(slide);
+
+        function next() {
+            showSlide(slide += 1);
+        }
+
+        function showSlide(x) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (x > slides.length) {
+                slide = 1;
+            }
+            if (x < 1) {
+                slide = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide - 1].style.display = "block";
+            text[slide - 1].style.display = "block";
+        }
+
+    </script>
+</body>

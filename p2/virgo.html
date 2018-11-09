@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UI and UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portcontent">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AnikaNiva</h1>
+            </a>
+        </div>
+
+        <div class="topbar">
+
+        </div>
+
+        <div class="nav" id="myNav">
+            <!--            <a href="javascript:void(0);" class="icon" onclick="openHam()">-->
+            <h3 class="icon" onclick="openHam()">menu</h3>
+            <div class="nav1 navhov">
+                <h3><a href="#">Portfolio</a></h3>
+            </div>
+            <div class="nav2box">
+                <div class="nav2">
+                    <h4><a href="uiux.html">UI/UX</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="anim.html">Animation</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="coding.html">Coding</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="graphic.html">Graphics</a></h4>
+                </div>
+            </div>
+            <div class="nav1">
+                <h3><a href="resume.html">Resume</a></h3>
+            </div>
+            <div class="nav1">
+                <h3><a href="contact.html">Contact</a></h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="contents">
+            <div class="hero">
+                <div class="heropic">
+                    <img src="media/virgo.png" alt="portfolio">
+                </div>
+            </div>
+
+            <div class="title">
+                    <h2>Virgo</h2>
+                <h4>RIT - Animation</h4>
+            </div>
+
+            <div class="description">
+                <p>Virgo was the segment I created using Frame-by-frame rotoscoping animation and after effects for my groups final animation project. Our theme was "zodiac" and we each animated a section to represent that. You can find my section in the video below at approximatele 00:15 seconds</p>
+            </div>
+
+            <div class="slideshow">
+            <iframe width="100%" src="https://www.youtube.com/embed/BKMHLrgSnhk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+        function openHam() {
+            var x = document.getElementById("myNav");
+            if (x.className === "nav") {
+                x.className += " responsive";
+                document.getElementsByClassName("logo")[0].style.display = "none";
+            } else {
+                x.className = "nav";
+                document.getElementsByClassName("logo")[0].style.display = "block";
+            }
+        }
+
+
+
+        var slide = 1;
+        showSlide(slide);
+
+        function next() {
+            showSlide(slide += 1);
+        }
+
+        function showSlide(x) {
+            var i;
+            var slides = document.getElementsByClassName("slide");
+            if (x > slides.length) {
+                slide = 1;
+            }
+            if (x < 1) {
+                slide = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slide - 1].style.display = "block";
+            text[slide - 1].style.display = "block";
+        }
+
+    </script>
+</body>
