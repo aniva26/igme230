@@ -4,7 +4,7 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
-.logo a{
+.logo a {
     color: black;
     text-decoration: none;
 }
@@ -96,7 +96,7 @@ h1 {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(19, 1fr);
+    grid-template-rows: repeat(20, 1fr);
     position: absolute;
     z-index: -300;
 }
@@ -151,6 +151,19 @@ p {
     background-color: #bac396;
 }
 
+.dropdown {
+    /* Sets the placement of the div in the grid system */
+    grid-column: 1/span 16;
+    grid-row: 20/span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+select {
+    padding: 5px;
+}
+
 .blurbside {
     /* Sets the placement of the div in the grid system */
     grid-column: 1/span 16;
@@ -181,9 +194,11 @@ p {
     background-color: #fbf3b2;
     position: relative;
 }
-.yellowcent{
-   align-content: center;
+
+.yellowcent {
+    align-content: center;
 }
+
 .blurbyellow h2 {
     position: absolute;
     top: 30%;
@@ -215,7 +230,12 @@ p {
 
 @media(min-width: 465px) {
     .contenthome {
-        grid-template-rows: repeat(14, 1fr);
+        grid-template-rows: repeat(15, 1fr);
+    }
+    .dropdown {
+        /* Sets the placement of the div in the grid system */
+        grid-column: 1/span 16;
+        grid-row: 15/span 1;
     }
     .blank {
         float: left;
@@ -250,8 +270,13 @@ p {
 }
 
 @media(min-width: 720px) {
+    .dropdown {
+        /* Sets the placement of the div in the grid system */
+        grid-column: 1/span 16;
+        grid-row: 17/span 1;
+    }
     .contenthome {
-        grid-template-rows: repeat(16, 1fr);
+        grid-template-rows: repeat(17, 1fr);
     }
     .num {
         grid-column: 12/span 3;
@@ -300,6 +325,11 @@ p {
 }
 
 @media (min-width: 1025px) {
+    .dropdown {
+        /* Sets the placement of the div in the grid system */
+        grid-column: 10/span 5;
+        grid-row: 5/span 2;
+    }
     .home {
         overflow: hidden;
     }
@@ -317,7 +347,6 @@ p {
         margin-left: 20px;
         float: none;
         position: static;
-
     }
     .topbar {
         display: none;
@@ -340,16 +369,15 @@ p {
         display: none;
     }
     .home {
-        height: 100vh;
     }
     .homecontent {
         max-width: 1200px;
         margin: auto;
         padding: 0;
-        height: 100vh;
+        max-height: 100px;
         display: grid;
         grid-template-columns: repeat(15, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-rows: 50px;
     }
     .contenthome {
         padding: 0;
@@ -359,7 +387,7 @@ p {
         top: 0px;
         display: grid;
         grid-template-columns: repeat(15, 1fr);
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: 40px repeat(8, 1fr);
     }
     .logo {
         /* Sets the placement of the div in the grid system */

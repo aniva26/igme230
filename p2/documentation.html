@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>UI and UX Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="portfolio.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="portcontent">
+        <div class="logo">
+            <a href="index.html">
+                <h1>AnikaNiva</h1>
+            </a>
+        </div>
+
+        <div class="topbar">
+
+        </div>
+
+        <div class="nav" id="myNav">
+            <!--            <a href="javascript:void(0);" class="icon" onclick="openHam()">-->
+            <h3 class="icon" onclick="openHam()">menu</h3>
+            <div class="nav1 navhov">
+                <h3><a href="#">Portfolio</a></h3>
+            </div>
+            <div class="nav2box">
+                <div class="nav2">
+                    <h4><a href="uiux.html">UI/UX</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="anim.html">Animation</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="coding.html">Coding</a></h4>
+                </div>
+                <div class="nav2">
+                    <h4><a href="graphic.html">Graphics</a></h4>
+                </div>
+            </div>
+            <div class="nav1">
+                <h3><a href="resume.html">Resume</a></h3>
+            </div>
+            <div class="nav1">
+                <h3><a href="contact.html">Contact</a></h3>
+            </div>
+
+        </div>
+
+
+
+        <div class="contacts">
+            <div class="contitle">
+                <h3>Documentation</h3>
+            </div>
+            <div class="form">
+                <p>The font, Karla, that I used on this site was designed by Jonny Pinhorn. The Javascript used to make the dropdown menu on the home page go directly to the page was adjusted from a sample Jim Habermas taught in my Web and Mobile II Class. The coding I personalized for the small cite menu open up was provided by W3C Schools.</p>
+                <p>Overall, I found this difficult because I made the choice to use CSS Grid overall for the design, but didn't realize until I Was in too deep that using equal fr units for the rows was a mistake that hindered me when I made multiple pages that had different amounts of content and information in them. Figuring out the navigation so it would transition as the page expanded was tough and took a lot of effort to figure out. Overall, I have probably far too many divs and WAYYYY too much CSS code for a site like this. At some point I'd love to start the design part from scratch to make it clearer.</p>
+                <p>I did not use any template or framework at all</p>
+                <p>I think, although the presentation doesn't appear consistent with this at all times, my use of CSS grid was a huge element in me going above and beyond. I also implemneted Javascript in several parts of the project (a slideshow when applicable in each portfolio piece page, embedding a javascript game I made, embedding videos and websites I made using iFrame). I put a whole lot of time into this and I hope that it reflects in some way in my efforts</p>
+            </div>
+        </div>
+
+        <script>
+            function openHam() {
+                var x = document.getElementById("myNav");
+                if (x.className === "nav") {
+                    x.className += " responsive";
+                    document.getElementsByClassName("logo")[0].style.display = "none";
+                } else {
+                    x.className = "nav";
+                    document.getElementsByClassName("logo")[0].style.display = "block";
+                }
+            }
+
+        </script>
+</body>

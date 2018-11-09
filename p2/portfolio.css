@@ -47,6 +47,7 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .edutitle {
@@ -342,8 +343,14 @@ textarea {
 }
 
 @media(min-width: 465px) {
-    body{
-        background-color: red;
+    .resumes {
+        width: 95%;
+        position: absolute;
+        z-index: -300;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(23, 1fr);
     }
     iframe {
         height: 60vh;
@@ -389,9 +396,40 @@ textarea {
         grid-template-rows: repeat(10, 1fr);
         grid-gap: 20px;
     }
-    .contacts {
+    .contacts,
+    .resumes {
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(10, 1fr);
+    }
+    .restitle {
+        grid-column: 4/span 6;
+        grid-row: 2/span 1;
+    }
+    .edutitle {
+        grid-column: 2/span 4;
+        grid-row: 4/span 1;
+    }
+    .education {
+        grid-column: 2/span 8;
+        grid-row: 5/span 5;
+    }
+    .exptitle {
+        grid-column: 5/span 4;
+        grid-row: 11/span 1;
+    }
+    .experience {
+        grid-column: 5/span 8;
+        grid-row: 12/span 7;
+    }
+    .skilltitle {
+        grid-column: 2/span 4;
+        grid-row: 19/span 1;
+    }
+    .skills {
+        padding-top: 20px;
+        grid-column: 2/span 8;
+        grid-row: 20/span 5;
+        column-count: 2;
     }
     .contitle {
         grid-column: 4/span 5;
@@ -452,6 +490,27 @@ textarea {
 }
 
 @media (min-width: 1025px) {
+    .exptitle {
+        grid-column: 8/span 4;
+        grid-row: 5/span 1;
+    }
+    .experience {
+        grid-column: 8/span 8;
+        grid-row: 6/span 7;
+    }
+    .skilltitle {
+        grid-column: 2/span 4;
+        grid-row: 11/span 1;
+    }
+    .skills {
+        grid-column: 2/span 8;
+        grid-row: 12/span 5;
+        column-count: 1;
+    }
+    .contitle {
+        grid-column: 4/span 5;
+        grid-row: 2/span 2;
+    }
     .form {
         grid-column: 3/span 6;
         grid-row: 4/span 6;
@@ -514,5 +573,47 @@ textarea {
         display: grid;
         grid-template-columns: repeat(15, 1fr);
         grid-template-rows: repeat(1, 1fr);
+    }
+}
+
+@media print{
+    h2{
+        text-decoration: underline;
+    }
+    body{
+        font-size: 75%;
+    }
+    .nav, .logo, .icon{
+        display: none;
+    }
+    .restitle {
+        grid-column: 4/span 6;
+        grid-row: 2/span 1;
+    }
+    .edutitle {
+        grid-column: 1/span 4;
+        grid-row: 3/span 1;
+    }
+    .education {
+        grid-column: 1/span 5;
+        grid-row: 4/span 5;
+    }
+    .exptitle {
+        grid-column: 6/span 4;
+        grid-row: 3/span 1;
+    }
+    .experience {
+        grid-column: 7/span 5;
+        grid-row: 4/span 7;
+    }
+    .skilltitle {
+        grid-column: 5/span 4;
+        grid-row: 11/span 1;
+    }
+    .skills {
+        padding-top: 20px;
+        grid-column: 3/span 8;
+        grid-row: 12/span 5;
+        column-count: 2;
     }
 }
