@@ -28,7 +28,7 @@ mail($destination_email, $email_subject, $email_body);
 
 <head>
     <meta charset="utf-8" />
-    <title>UI and UX Portfolio</title>
+    <title>Thanks for Contacting Me</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="portfolio.css">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
