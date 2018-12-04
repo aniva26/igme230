@@ -252,6 +252,7 @@ p {
     position: relative;
     background-color: #ffffff;
     transition: .2s ease;
+    column-count: 2;
 }
 
 .topnav.responsive .icon { /* positions the hamburger icon once the menu is activated */
