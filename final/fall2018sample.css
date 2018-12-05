@@ -72,20 +72,20 @@ footer {
     grid-template-areas: "header""nav""article""aside""footer";
 }
 
-.menuitem{
+.menuitem {
     background-color: white;
     margin: 0;
     border-top: 1px solid #b5e7a0;
 }
 
-.submenu{
+.submenu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: none;
 }
 
-.submenu li{
+.submenu li {
     padding-left: .25rem;
     background-color: lightgray;
 }
@@ -97,6 +97,7 @@ footer {
         min-height: 100vh;
         margin: auto;
         grid-template-columns: 1fr 2fr 200px;
+        grid-auto-rows: 4rem 1fr 3rem;
         grid-template-areas: "header header header" "aside article nav" "footer footer footer";
     }
 }
