@@ -92,12 +92,17 @@ footer {
     background-color: #ddd;
 }
 
+#extracredit{
+    grid-area: extra;
+    background-color: lightblue;
+}
+
 #yourgrid {
     display: grid;
     width: 100vw;
     grid-template-columns: 1fr;
-    grid-template-rows: 75px 30px auto auto 30px;
-    grid-template-areas: "header" "nav" "article" "aside" "footer"
+    grid-template-rows: 75px 30px auto auto auto 30px;
+    grid-template-areas: "header" "nav" "article" "aside" "extra" "footer"
 }
 
 
@@ -110,12 +115,8 @@ footer {
         margin: auto;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 75px 30px 1fr 2fr 50px;
-        grid-template-areas: "header header" "nav nav" "aside article" "aside article" "footer footer";
+        grid-template-areas: "header header" "nav nav" "aside article" "extra article" "footer footer";
     }
 
-    #extracredit{
-        grid-row: 4/span 1;
-        grid-column: 1/span 1;
-    }
 
 }

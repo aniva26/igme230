@@ -15,3 +15,7 @@ $(function () {
 //    $('#count').html(function(i, val) { return +val+1 });
 //}
 });
+
+
+var counter = 0;
+
