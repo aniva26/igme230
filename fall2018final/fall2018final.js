@@ -19,3 +19,7 @@ $(function () {
 
 var counter = 0;
 
+function countit(){
+    counter+=1;
+    document.getElementById("count").innerHTML=counter;
+}
