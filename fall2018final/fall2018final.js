@@ -4,11 +4,14 @@ $(function () {
     });
 
     let text = ("article0.txt") // sets default verse element
-//    $("#choose-content").val(text); // changes menu option to default
     $("article").load(text); // retrieves only default element
 
     $("input[type='radio']").click(function () {
         text = $(this).val();
         $("article").load(text);
     });
+
+    $("#clickme").click(function() {
+    $('#count').html(function(i, val) { return +val+1 });
+}
 });
