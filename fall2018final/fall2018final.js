@@ -11,7 +11,7 @@ $(function () {
         $("article").load(text);
     });
 
-    $("#clickme").click(function() {
-    $('#count').html(function(i, val) { return +val+1 });
-}
+//    $("#clickme").click(function() {
+//    $('#count').html(function(i, val) { return +val+1 });
+//}
 });
