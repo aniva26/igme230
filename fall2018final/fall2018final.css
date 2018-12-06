@@ -113,4 +113,9 @@ footer {
         grid-template-areas: "header header" "nav nav" "aside article" "aside article" "footer footer";
     }
 
+    #extracredit{
+        grid-row: 4/span 1;
+        grid-column: 1/span 1;
+    }
+
 }
