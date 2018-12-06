@@ -7,7 +7,7 @@ $(function () {
 //    $("#choose-content").val(text); // changes menu option to default
     $("article").load(text); // retrieves only default element
 
-    $("form").select(function () {
+    $("input[type='radio']").click(function () {
         text = $(this).val();
         $("article").load(text);
     });
