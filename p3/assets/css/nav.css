@@ -1,0 +1,255 @@
+body{
+    font-family: Karla;
+}
+nav {
+    display: flex;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+}
+
+.navi {
+    display: block;
+}
+
+.navcheckbox {
+    display: none;
+}
+
+.navbutton {
+    background-color: #fff;
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    border-radius: 50%;
+    z-index: 2000;
+    /*     -webkit-box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);*/
+    /*     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);*/
+    text-align: center;
+    cursor: pointer;
+}
+
+.navbg {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    background-image: radial-gradient(#fff, #ddd);
+    z-index: 1000;
+    -webkit-transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1), -webkit-transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+/*
+        @media only screen and (max-width: 56.25em) {
+            .navigation__background {
+                top: 1.5rem;
+                right: 4.5rem;
+            }
+        }
+        @media only screen and (max-width: 37.5em) {
+            .navigation__background {
+                top: 1.5rem;
+                right: 3.5rem;
+            }
+        }
+*/
+
+.navbox {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation__link:hover,
+.navigation__link:active {
+    background-position: 100%;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #CD004D 50%);
+    color: #fff;
+    -webkit-transform: translateX(1rem);
+    transform: translateX(1rem);
+}
+
+.navcheckbox:checked~.navbg {
+    -webkit-transform: scale(80);
+    transform: scale(80);
+}
+
+.navcheckbox:checked~.navbox {
+    opacity: 1;
+    width: 100%;
+}
+
+.hamburger {
+    position: relative;
+    margin-top: 2.1rem;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 2rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.hamburger::before {
+    top: -.6rem;
+}
+
+.hamburger::after {
+    top: .6rem;
+}
+
+.navbutton:hover {
+    top: 1rem;
+}
+
+.navcheckbox:checked+.navbutton .hamburger {
+    background-color: transparent;
+}
+
+.navcheckbox:checked+.navbutton .hamburger::before {
+    top: 0;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.navcheckbox:checked+.navbutton .hamburger::after {
+    top: 0;
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+.navbuts {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbuts a {
+    text-decoration: none;
+}
+
+.navbuts h2 {
+    color: black;
+    margin: 25px 0 25px 0;
+    transition: .2s ease;
+}
+
+.navbuts h3 {
+    color: grey;
+    margin: 35px 0 35px 0;
+    transition: .2s ease;
+}
+
+.navbuts h2:hover {
+    transition: .2s ease;
+    color: pink;
+}
+
+.navbuts h3:hover {
+    transition: .2s ease;
+    color: pink;
+}
+
+
+@media(min-width: 600px) {
+    .navbutton {
+        display: none;
+    }
+    .navbg {
+        display: none;
+    }
+    .navbox {
+        transition: none;
+        opacity: 1;
+        height: auto;
+        position: static;
+        z-index: 0;
+        width: auto;
+    }
+    .navbuts {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: baseline;
+        margin-top: 0;
+    }
+    .hiddennav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 0;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    .portfolionav:hover~.hiddennav {
+        width: 120px;
+        background-color: rgba(255, 255, 255, .8);
+        transition: .3s ease;
+    }
+    .hiddennav:hover {
+        width: 120px;
+        background-color: rgba(255, 255, 255, .8);
+        transition: .3s ease;
+    }
+    .navbuts h3 {
+        margin: 5px;
+    }
+    .portfolionav {
+        padding-right: 20px;
+    }
+    .resumenav {
+        padding: 0 20px 0 20px;
+    }
+    .contactnav {
+        padding-left: 20px;
+    }
+}
+
+@media(min-width: 1000px) {
+    .hiddennav {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        width: 0;
+        overflow: hidden;
+        transition: .3s ease;
+    }
+    .portfolionav:hover~.hiddennav {
+        width: 400px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: .3s ease;
+    }
+    .hiddennav:hover {
+        width: 400px;
+        background-color: rgba(0, 0, 0, 0);
+        transition: .3s ease;
+    }
+}

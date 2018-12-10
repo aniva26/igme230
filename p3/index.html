@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anika Niva - Design Portfolio</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        function goToPage2() {
+            var selections = document.getElementById('pageSelect');
+            var options = selections.getElementsByTagName('option');
+            var optionsCount = options.length;
+            for (var i = 0; i < optionsCount; i++) {
+                if (options[i].selected == true) {
+                    window.location = options[i].value;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/media/logo.png">
+        </a>
+    </div>
+    <div class="navi">
+        <input type="checkbox" class="navcheckbox" id="navtoggle">
+
+        <label for="navtoggle" class="navbutton">
+            <span class="hamburger"></span>
+        </label>
+        <div class="navbg"></div>
+
+
+        <div class="navbox">
+            <div class="navbuts">
+                <div class="portfolionav">
+                    <a href="#">
+                        <h2>Portfolio</h2>
+                    </a>
+                </div>
+                <div class="hiddennav">
+                    <a href="uiux.html">
+                        <h3>UI/UX</h3>
+                    </a>
+                    <a href="anim.html">
+                        <h3>Animation</h3>
+                    </a>
+                    <a href="coding.html">
+                        <h3>Coding</h3>
+                    </a>
+                    <a href="graphic.html">
+                        <h3>Graphics</h3>
+                    </a>
+                </div>
+                <div class="resumenav">
+                    <a href="resume.html">
+                        <h2>Resume</h2>
+                    </a>
+                </div>
+                <div class="contactnav">
+                    <a href="contact.html">
+                        <h2>Contact</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="contenthome">
+    <div class="blank"></div>
+
+    <div class="welcome">
+        <p>Welcome to my portfolio! This site has several categories of work I have done and some of my favorite work i've done in those categories. Please feel free to reach out to me with any questions about the projects or any job inquiries. I do freelance work when I have the time and am currently looking for an Internship for Summer 2019.</p>
+    </div>
+    <div class="welcome2">
+        I am currently a New Media Design junior at the Rochester Institute of Technology. I also intend to minor in Psychology and am taking several additional coding classes. I am working as a T.A. in an introductory HTML and CSS course and am working part time as a User Experience and Graphic Designer for a pharmaceutical company.
+    </div>
+
+    <div class="head">
+        <h4>Featured Work</h4>
+        <h2>- Virgo -</h2>
+    </div>
+
+    <div class="feat">
+        <div class="vidhome">
+            <video autoplay loop class="fillWidth" muted>
+            <source src="assets/media/homeAnim.mp4" type="video/mp4"/>
+            <source src="assets/media/homeAnim.ogv" type="video/ogg"/>
+            <source src="assets/media/homeAnim.webm" type="video/webm"/>
+            Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+        </div>
+    </div>
+    <div class="cap">
+        <p><a href="virgo.html"><b>Virgo</b></a> was made using frame-by-frame rotoscope animation in the Spring of 2018. This was the segment I made for a group video that represented different horoscope signs. My inspiration came from the Vestal Virgins, of whom Virgo is named after, and I represented this with a flowing grecian gown clad woman reverently lighting the project constant, the pink box, on fire. She is also clad in the stars that make up her constellation, corresponding to the body parts they represent in the sky.</p>
+    </div>
+    <div class="credit">
+        <p>made at The Rochester Institute of Technology</p>
+    </div>
+    <div class="ux">
+        <h2>I Love The User Experience</h2>
+    </div>
+    <div class="ux2">
+        <p>I really love user experience design and am actually hoping to go back to school at some point after I get my B.F.A. to get my Masters in Human Computer Interaction. The thought process and reasoning behind design decisions and working with users and seeing first hand how they think is great!</p>
+    </div>
+
+</div>
+
+<footer>
+    <form name="form2">
+        <select id="pageSelect" size="1" onchange="goToPage2()">
+                    <option selected value="none">Select a page and go</option>
+                    <option value="uiux.html">UI/UX Design Portfolio</option>
+                    <option value="anim.html">Animation Portfolio</option>
+                    <option value="coding.html">Coding Portfolio</option>
+                    <option value="graphic.html">Graphic Design Portfolio</option>
+                    <option value="resume.html">Resume</option>
+                    <option value="contact.html">Contact Me</option>
+                    <option value="documentation.html">Documentation</option>
+                </select>
+    </form>
+</footer>
+</html>

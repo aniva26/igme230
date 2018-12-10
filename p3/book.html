@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anika Niva - Design Portfolio</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        function goToPage2() {
+            var selections = document.getElementById('pageSelect');
+            var options = selections.getElementsByTagName('option');
+            var optionsCount = options.length;
+            for (var i = 0; i < optionsCount; i++) {
+                if (options[i].selected == true) {
+                    window.location = options[i].value;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/media/logo.png">
+        </a>
+    </div>
+    <div class="navi">
+        <input type="checkbox" class="navcheckbox" id="navtoggle">
+
+        <label for="navtoggle" class="navbutton">
+            <span class="hamburger"></span>
+        </label>
+        <div class="navbg"></div>
+
+
+        <div class="navbox">
+            <div class="navbuts">
+                <div class="portfolionav">
+                    <a href="#">
+                        <h2>Portfolio</h2>
+                    </a>
+                </div>
+                <div class="hiddennav">
+                    <a href="uiux.html">
+                        <h3>UI/UX</h3>
+                    </a>
+                    <a href="anim.html">
+                        <h3>Animation</h3>
+                    </a>
+                    <a href="coding.html">
+                        <h3>Coding</h3>
+                    </a>
+                    <a href="graphic.html">
+                        <h3>Graphics</h3>
+                    </a>
+                </div>
+                <div class="resumenav">
+                    <a href="resume.html">
+                        <h2>Resume</h2>
+                    </a>
+                </div>
+                <div class="contactnav">
+                    <a href="contact.html">
+                        <h2>Contact</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="contentpage">
+    <div class="blank"></div>
+    <div class="item">
+        <img src="assets/media/catch22.jpg">
+    </div>
+    <div class="title">
+        <h2>Catch-22 Book Cover</h2>
+        <h4>RIT - New Media Survey I</h4>
+    </div>
+
+    <div class="descrip">
+        <p>This project was from my first semester at RIT, but I was still really happy with the concept and the way that it turned out (not to mention the book I designed the cover for, <i>Catch 22</i>, is one of my favorite books. Because the book deals with the ridiculousness of war and the entire title of the book revolves around the concept that you'd have to be insane to fly into the certain death of their missions, and an insane person can't fly, but only a sane person would refuse to fly them- thus, no matter what, you need to fly these dangerous missions. There is a very dark humor about the book overall in addition to the childlike ridiculousness and I loved the concept of illustrating that with a child's drawing of an pilot smiling happily in his plane as a missile is seconds away from killing him.</p>
+    </div>
+
+    <div class="sample">
+        <div class="slide">
+            <div class="slidepage" onclick="next()">
+                <h5>Slide 01 / 03</h5>
+                <h4>Next</h4>
+            </div>
+            <div class="slidepic">
+                <img src="assets/media/book1.jpg" alt="portfolio">
+            </div>
+            <div class="slidetext">
+                <p>This was an early draft of the cover- I had drawn the airplane image and text myself (using my left hand) but I decided I wanted to go for something a bit more authentic</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slidepage" onclick="next()">
+                <h5>Slide 02 / 03</h5>
+                <h4>Next</h4>
+            </div>
+            <div class="slidepic">
+                <img src="assets/media/book2.jpg" alt="portfolio">
+            </div>
+            <div class="slidetext">
+                <p>This was an early version I put together after I commissioned my little brothers to draw me the scene- they all love drawing war and battle scenes and were an awesome resource for creating this authentic juvenile feeling</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slidepage" onclick="next()">
+                <h5>Slide 03 / 03</h5>
+                <h4>Next</h4>
+            </div>
+            <div class="slidepic">
+                <img src="assets/media/book3.jpg" alt="portfolio">
+            </div>
+            <div class="slidetext">
+                <p>For the final cover, I opted for cleaner title text and brought that pop of red back in from the earlier draft to represent the death or war and give a stronger juxtaposition with the artwork</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="slidepage" onclick="next()">
+            <h5>Slide 03 / 03</h5>
+            <h4>Next Slide</h4>
+        </div>
+        <div class="slidepic">
+            <img src="assets/media/ortho3.png" alt="portfolio">
+        </div>
+        <div class="slidetext">
+            <p>We recently got back to work on this iteration of the dashboard. We are simplifying the content a lot and listing the requirements for this initial simplified release before proceeding. We are trying to make everything in this iteration clean and easy to navigate and find information. We are using <i>Figma</i> to develop and prototype these.</p>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+<footer>
+    <form name="form2">
+        <select id="pageSelect" size="1" onchange="goToPage2()">
+                    <option selected value="none">Select a page and go</option>
+                    <option value="uiux.html">UI/UX Design Portfolio</option>
+                    <option value="anim.html">Animation Portfolio</option>
+                    <option value="coding.html">Coding Portfolio</option>
+                    <option value="graphic.html">Graphic Design Portfolio</option>
+                    <option value="resume.html">Resume</option>
+                    <option value="contact.html">Contact Me</option>
+                    <option value="documentation.html">Documentation</option>
+                </select>
+    </form>
+</footer>
+
+<script>
+    var slide = 1;
+    showSlide(slide);
+
+    function next() {
+        showSlide(slide += 1);
+    }
+
+    function showSlide(x) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (x > slides.length) {
+            slide = 1;
+        }
+        if (x < 1) {
+            slide = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slide - 1].style.display = "block";
+        text[slide - 1].style.display = "block";
+    }
+
+</script>
+
+</html>

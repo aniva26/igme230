@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anika Niva - Design Portfolio</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        function goToPage2() {
+            var selections = document.getElementById('pageSelect');
+            var options = selections.getElementsByTagName('option');
+            var optionsCount = options.length;
+            for (var i = 0; i < optionsCount; i++) {
+                if (options[i].selected == true) {
+                    window.location = options[i].value;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/media/logo.png">
+        </a>
+    </div>
+    <div class="navi">
+        <input type="checkbox" class="navcheckbox" id="navtoggle">
+
+        <label for="navtoggle" class="navbutton">
+            <span class="hamburger"></span>
+        </label>
+        <div class="navbg"></div>
+
+
+        <div class="navbox">
+            <div class="navbuts">
+                <div class="portfolionav">
+                    <a href="#">
+                        <h2>Portfolio</h2>
+                    </a>
+                </div>
+                <div class="hiddennav">
+                    <a href="uiux.html">
+                        <h3>UI/UX</h3>
+                    </a>
+                    <a href="anim.html">
+                        <h3>Animation</h3>
+                    </a>
+                    <a href="coding.html">
+                        <h3>Coding</h3>
+                    </a>
+                    <a href="graphic.html">
+                        <h3>Graphics</h3>
+                    </a>
+                </div>
+                <div class="resumenav">
+                    <a href="resume.html">
+                        <h2>Resume</h2>
+                    </a>
+                </div>
+                <div class="contactnav">
+                    <a href="contact.html">
+                        <h2>Contact</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="contentpage">
+    <div class="blank"></div>
+    <div class="item">
+        <img src="assets/media/bakery.png">
+    </div>
+    <div class="title">
+        <h2>Bakery Scheduling</h2>
+        <h4>RIT - GUI</h4>
+    </div>
+
+    <div class="descrip">
+        <p>This is a project that I've been working on all semester for my GUI (Graphical User Interface) class. We've been going through the in depth processing of researching and designing an organizational app, and I opted to focus on an organizational app for Bakers to manage them and their employees' schedules, recipes and ingredient inventory.</p>
+    </div>
+
+    <div class="sample">
+        <div class="slide">
+            <div class="slidepage" onclick="next()">
+                <h5>Slide 01 / 03</h5>
+                <h4>Next</h4>
+            </div>
+            <div class="slidepic">
+                <img src="assets/media/bakery1.jpg" alt="portfolio">
+            </div>
+            <div class="slidetext">
+                <p>We began by outlining our problems and interviewing potential users to figure out what their problems were to figure out how we may be able to solve them and make their lives easier with our app</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slidepage" onclick="next()">
+                <h5>Slide 02 / 03</h5>
+                <h4>Next</h4>
+            </div>
+            <div class="slidepic">
+                <img src="assets/media/bakery3.jpg" alt="portfolio">
+            </div>
+            <div class="slidetext">
+                <p>We are currently at the point where we are coming up with visual concepts, moodboards, and styles for our potential app so we can flesh out the comps a bit more.</p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slidepage" onclick="next()">
+                <h5>Slide 03 / 03</h5>
+                <h4>Next</h4>
+            </div>
+            <div class="slidepic">
+                <img src="assets/media/bakery2.png" alt="portfolio">
+            </div>
+            <div class="slidetext">
+                <p>This is a sample of one of the pages from the completed comped up workflow. I'm in the process of animating the interactions between the pages and have added color and style to all of them</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<footer>
+    <form name="form2">
+        <select id="pageSelect" size="1" onchange="goToPage2()">
+                    <option selected value="none">Select a page and go</option>
+                    <option value="uiux.html">UI/UX Design Portfolio</option>
+                    <option value="anim.html">Animation Portfolio</option>
+                    <option value="coding.html">Coding Portfolio</option>
+                    <option value="graphic.html">Graphic Design Portfolio</option>
+                    <option value="resume.html">Resume</option>
+                    <option value="contact.html">Contact Me</option>
+                    <option value="documentation.html">Documentation</option>
+                </select>
+    </form>
+</footer>
+
+<script>
+    var slide = 1;
+    showSlide(slide);
+
+    function next() {
+        showSlide(slide += 1);
+    }
+
+    function showSlide(x) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (x > slides.length) {
+            slide = 1;
+        }
+        if (x < 1) {
+            slide = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slide - 1].style.display = "block";
+        text[slide - 1].style.display = "block";
+    }
+
+</script>
+
+</html>

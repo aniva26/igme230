@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+}
+
+body {
+    max-width: 1000px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.space{
+    padding: 10px 0 10px 0;
+}
+
+.logo {
+    padding: 15px 50px 15px 20px;
+    width: 125px;
+}
+
+.blank {
+    display: none;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.sample p {
+    padding: 0 30px 0 30px;
+    text-align: center;
+}
+
+.welcome {
+    grid-area: welcome;
+    padding: 30px;
+    padding-top: 100px;
+    background-color: #bac396;
+}
+
+.welcome2 {
+    grid-area: welcome2;
+    padding: 30px;
+}
+
+.head {
+    grid-area: head;
+    text-align: center;
+    background-color: #e38a7d;
+    padding: 20px;
+}
+
+.feat {
+    grid-area: feat;
+    /*    overflow: hidden;*/
+}
+
+.blank {
+    grid-area: blank;
+}
+
+.vidhome {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+video {
+    width: 200%;
+}
+
+.cap {
+    grid-area: cap;
+    padding: 30px;
+    background-color: #fff3df;
+}
+
+.credit {
+    grid-area: credit;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.ux {
+    grid-area: ux;
+    text-align: center;
+    background-color: #fbf3b2;
+    padding: 20px;
+}
+
+.ux2 {
+    grid-area: ux2;
+    padding: 30px;
+    background-color: #e38a7d;
+}
+
+footer {
+    text-align: center;
+    margin: 20px;
+}
+
+.blank {
+    padding: 40px;
+}
+
+.item1 {
+    margin-top: 100px;
+    grid-area: item1;
+    border: 1px solid lightgrey;
+    transition: .2s ease;
+}
+
+.label1 {
+    grid-area: label1;
+    padding: 20px;
+    text-align: center;
+    background-color: #bac396;
+    margin-bottom: 50px;
+    transition: .2s ease;
+}
+
+.item2 {
+    grid-area: item2;
+    border: 1px solid lightgrey;
+    transition: .2s ease;
+}
+
+.label2 {
+    grid-area: label2;
+    background-color: #e38a7d;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 50px;
+    transition: .2s ease;
+}
+
+.item3 {
+    grid-area: item3;
+    border: 1px solid lightgrey;
+    transition: .2s ease;
+}
+
+.contentport a {
+    color: black;
+    text-decoration: none;
+}
+
+.label3 {
+    grid-area: label3;
+    background-color: #fbf3b2;
+    text-align: center;
+    padding: 20px;
+    transition: .2s ease;
+}
+
+.restitle {
+    grid-area: restitle;
+    margin-top: 100px;
+    text-align: center;
+    /*    background-color: #fff3df;*/
+    padding: 20px;
+}
+
+.edutitle {
+    grid-area: edutitle;
+    text-align: center;
+    background-color: #bac396;
+    padding: 20px;
+}
+
+.education {
+    grid-area: education;
+    padding: 30px;
+}
+
+.exptitle {
+    grid-area: exptitle;
+    text-align: center;
+    background-color: #e38a7d;
+    padding: 20px;
+}
+
+.block {
+    padding-top: 20px;
+}
+
+.experience {
+    grid-area: experience;
+    padding: 30px;
+}
+
+.skilltitle {
+    grid-area: skilltitle;
+    text-align: center;
+    background-color: #fbf3b2;
+    padding: 20px;
+}
+
+.skills {
+    grid-area: skills;
+    padding: 30px;
+}
+
+.contenthome {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "welcome" "welcome2" "head" "feat" "cap" "credit" "ux" "ux2";
+}
+
+.contentport {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "item1" "label1" "item2" "label2" "item3" "label3";
+}
+
+.contentresume {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "restitle" "edutitle" "education" "exptitle" "experience" "skilltitle" "skills";
+}
+
+.contitle {
+    grid-area: conttitle;
+    margin-top: 100px;
+    text-align: center;
+    background-color: #fff3df;
+    padding: 20px;
+}
+
+.form {
+    grid-area: form;
+    padding: 30px;
+}
+
+.q1,
+.q2,
+.q3 {
+    padding-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+}
+
+.contentcontact {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "conttitle" "form";
+}
+
+.item {
+    grid-area: item;
+    margin-top: 100px;
+    ;
+}
+
+.button {
+   width: 80px;
+}
+
+.title {
+    grid-area: title;
+    padding: 20px;
+    text-align: center;
+    background-color: #bac396;
+    margin-bottom: 20px;
+}
+
+.descrip {
+    grid-area: descrip;
+    padding: 30px;
+}
+
+.slidepage {
+    text-align: center;
+    padding: 20px;
+    background-color: #e38a7d;
+    cursor: pointer;
+}
+
+.sample {
+    grid-area: sample;
+}
+
+.contentpage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "item" "title" "descrip" "sample";
+}
+
+.slidetext {
+    padding: 30px;
+}
+
+@media (min-width: 600px) {
+    .blank {
+        display: block;
+    }
+    video {
+        width: 160%;
+    }
+    .contenthome {
+        grid-gap: 10px 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "blank blank blank" "head feat feat" "cap feat feat" "cap feat feat" "credit feat feat" "welcome welcome welcome2" "ux ux2 ux2";
+    }
+    .item1,
+    .item2,
+    .item3 {
+        margin-top: 50px;
+    }
+    .label1:hover {
+        color: white;
+        background-color: dimgrey;
+        transition: .2s ease;
+    }
+    .item1:hover~.label1 {
+        color: white;
+        background-color: dimgrey;
+        transition: .2s ease;
+    }
+    .label2:hover {
+        color: white;
+        background-color: dimgrey;
+        transition: .2s ease;
+    }
+    .item2:hover~.label2 {
+        color: white;
+        background-color: dimgrey;
+        transition: .2s ease;
+    }
+    .label3:hover {
+        color: white;
+        background-color: dimgrey;
+        transition: .2s ease;
+    }
+    .item3:hover~.label3 {
+        color: white;
+        background-color: dimgrey;
+        transition: .2s ease;
+    }
+    .contentport {
+        grid-gap: 10px 10px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "blank blank blank" "item1 item2 item3" "label1 label2 label3";
+    }
+    .item {
+        margin-top: 0;
+    }
+    .sample {
+        padding: 0 100px 0 100px;
+    }
+    .contentpage {
+        grid-gap: 10px 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "blank blank blank blank" "title title descrip descrip" "item item descrip descrip" "sample sample sample sample";
+    }
+    .contentresume {
+        grid-gap: 10px 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "blank blank blank blank" "restitle restitle restitle restitle" "edutitle edutitle exptitle exptitle" "education education experience experience" ". skilltitle skilltitle ." ". skills skills .";
+    }
+
+    .contentcontact{
+        grid-gap: 10px 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "blank blank blank blank" ". conttitle conttitle ." ". form form .";
+    }
+    .title {
+        margin-bottom: 0;
+    }
+    .slidepage {
+        margin-top: 50px;
+    }
+    .ux {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

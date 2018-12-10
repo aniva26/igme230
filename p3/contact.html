@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anika Niva - Design Portfolio</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        function goToPage2() {
+            var selections = document.getElementById('pageSelect');
+            var options = selections.getElementsByTagName('option');
+            var optionsCount = options.length;
+            for (var i = 0; i < optionsCount; i++) {
+                if (options[i].selected == true) {
+                    window.location = options[i].value;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/media/logo.png">
+        </a>
+    </div>
+    <div class="navi">
+        <input type="checkbox" class="navcheckbox" id="navtoggle">
+
+        <label for="navtoggle" class="navbutton">
+            <span class="hamburger"></span>
+        </label>
+        <div class="navbg"></div>
+
+
+        <div class="navbox">
+            <div class="navbuts">
+                <div class="portfolionav">
+                    <a href="#">
+                        <h2>Portfolio</h2>
+                    </a>
+                </div>
+                <div class="hiddennav">
+                    <a href="uiux.html">
+                        <h3>UI/UX</h3>
+                    </a>
+                    <a href="anim.html">
+                        <h3>Animation</h3>
+                    </a>
+                    <a href="coding.html">
+                        <h3>Coding</h3>
+                    </a>
+                    <a href="graphic.html">
+                        <h3>Graphics</h3>
+                    </a>
+                </div>
+                <div class="resumenav">
+                    <a href="resume.html">
+                        <h2>Resume</h2>
+                    </a>
+                </div>
+                <div class="contactnav">
+                    <a href="contact.html">
+                        <h2>Contact</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="contentcontact">
+    <div class="contitle">
+        <h3>Fill out your information here and I'll get back to you!</h3>
+    </div>
+    <div class="form">
+        <form action="process.php" method="GET" class="fill">
+
+            <div class="q1">
+                <p class="header">What's your name?</p>
+                <input type="text" name="name" id="name" placeholder="Name" required>
+            </div>
+
+            <div class="q2">
+                <p class="header">What's your email address?</p>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="q3">
+                <p class="header">What's your message?</p>
+
+                <textarea name="message" id="message">Message
+                    </textarea>
+            </div>
+
+            <div class="sub">
+                <input type="submit" class="button" value="Send">
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<footer>
+    <form name="form2">
+        <select id="pageSelect" size="1" onchange="goToPage2()">
+                    <option selected value="none">Select a page and go</option>
+                    <option value="uiux.html">UI/UX Design Portfolio</option>
+                    <option value="anim.html">Animation Portfolio</option>
+                    <option value="coding.html">Coding Portfolio</option>
+                    <option value="graphic.html">Graphic Design Portfolio</option>
+                    <option value="resume.html">Resume</option>
+                    <option value="contact.html">Contact Me</option>
+                    <option value="documentation.html">Documentation</option>
+                </select>
+    </form>
+</footer>
+
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Anika Niva - Design Portfolio</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/content.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <script>
+        function goToPage2() {
+            var selections = document.getElementById('pageSelect');
+            var options = selections.getElementsByTagName('option');
+            var optionsCount = options.length;
+            for (var i = 0; i < optionsCount; i++) {
+                if (options[i].selected == true) {
+                    window.location = options[i].value;
+                }
+            }
+        }
+
+    </script>
+</head>
+
+
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets/media/logo.png">
+        </a>
+    </div>
+    <div class="navi">
+        <input type="checkbox" class="navcheckbox" id="navtoggle">
+
+        <label for="navtoggle" class="navbutton">
+            <span class="hamburger"></span>
+        </label>
+        <div class="navbg"></div>
+
+
+        <div class="navbox">
+            <div class="navbuts">
+                <div class="portfolionav">
+                    <a href="#">
+                        <h2>Portfolio</h2>
+                    </a>
+                </div>
+                <div class="hiddennav">
+                    <a href="uiux.html">
+                        <h3>UI/UX</h3>
+                    </a>
+                    <a href="anim.html">
+                        <h3>Animation</h3>
+                    </a>
+                    <a href="coding.html">
+                        <h3>Coding</h3>
+                    </a>
+                    <a href="graphic.html">
+                        <h3>Graphics</h3>
+                    </a>
+                </div>
+                <div class="resumenav">
+                    <a href="resume.html">
+                        <h2>Resume</h2>
+                    </a>
+                </div>
+                <div class="contactnav">
+                    <a href="contact.html">
+                        <h2>Contact</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="contentcontact">
+    <div class="contitle">
+        <h3>Thanks for Visiting my Project 3 Site!</h3>
+    </div>
+    <div class="form">
+        <p class="space">
+            The font, Karla, that I used on this site was designed by Jonny Pinhorn. The Javascript used to make the dropdown menu on the home page go directly to the page was adjusted from a sample Jim Habermas taught in my Web and Mobile II Class. The coding I personalized for the hamburger menu was developed by Terence Budu-Biney and edited/customized by me</p>
+
+        <p class="space">
+            Overall, I'm much happier with the design of this site than I was with Project 2. I used a lot of CSS Grid again, but I did NOT use grid-template-rows like I made the mistake of doing last time. I also used grid areas rather than indivual positioning. I thought that it made it a lot easier to control and position object within a media query, but I was disappointed once I dug into it that I wasn't able to get the same conent overlay effect that I'd used in project 2 (in particular on the homepage). I still feel that the site is so much more responsive and looks SO much better as it's resized than it did in my previous version (which also had like 6 media queries but still looked not-so-good!)
+        </p>
+
+        <p class="space">
+            I did not use any template or framework at all
+        </p>
+
+        <p class="space">
+            I used Javascript in the same ways as I did in Project 2, but I redid the entire CSS code and HTML code from scratch for this iteration of the project in order to correct all the issues that left me feeling so frustrated in the last version. I used the same content, but did update a few things because of how I've progressed on projects since project 2.
+        </p>
+    </div>
+</div>
+
+<footer>
+    <form name="form2">
+        <select id="pageSelect" size="1" onchange="goToPage2()">
+                    <option selected value="none">Select a page and go</option>
+                    <option value="uiux.html">UI/UX Design Portfolio</option>
+                    <option value="anim.html">Animation Portfolio</option>
+                    <option value="coding.html">Coding Portfolio</option>
+                    <option value="graphic.html">Graphic Design Portfolio</option>
+                    <option value="resume.html">Resume</option>
+                    <option value="contact.html">Contact Me</option>
+                    <option value="documentation.html">Documentation</option>
+                </select>
+    </form>
+</footer>
+
+
+</html>
