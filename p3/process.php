@@ -6,9 +6,9 @@ function test_input($data){
     return $data;
 }
 
-$name = test_input($_POST['name']);
-$email = test_input($_POST['email']);
-$message = test_input($_POST['message']);
+$name = test_input($_GET['name']);
+$email = test_input($_GET['email']);
+$message = test_input($_GET['message']);
 
 //$destination_email = "aln3339@g.rit.edu";
 $destination_email = "aln3339@g.rit.edu";
